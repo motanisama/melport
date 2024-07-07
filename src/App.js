@@ -23,7 +23,17 @@ function App() {
         />
 
         <CallToActionWithAnnotation />
-        <Grid templateColumns="repeat(3, 1fr)" w={"75%"} h={"100%"} zIndex={1}>
+        <Grid
+          templateColumns={{
+            base: "repeat(1, 1fr)",
+            sm: "repeat(1, 1fr)",
+            md: "repeat(1, 1fr)",
+            lg: "repeat(3, 1fr)",
+          }}
+          w={"75%"}
+          h={"100%"}
+          zIndex={1}
+        >
           <Card
             image={"/IMG_0401.jpg"}
             title={"Across the Island"}
@@ -53,7 +63,9 @@ function App() {
           <Card
             image={"/IMG_0442.jpg"}
             title={"Concrete roots"}
-            text={"Tennis in an unconvetial spot with the convential OGs ⚡"}
+            text={
+              "Tennis in an unconventional spot with the conventional OGs ⚡"
+            }
           />
         </Grid>
       </Box>
